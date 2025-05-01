@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--grey5);
+}
+
+.container > img {
+  width: 150px;
+  flex-basis: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.container > div {
+  flex: 1;
+}
+
+.container > div > a:first-child {
+  font-family: "Cairo";
+  font-size: 15px;
+  color: var(--black);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.container > div > a:first-child:hover,
+.container > div > p:nth-child(2) > a:hover {
+  color: var(--red);
+}
+
+.container > div > p:nth-child(2) {
+  font-family: "Cairo";
+  font-size: 13.5px;
+  color: var(--black2);
+  font-weight: 400;
+  margin-bottom: 0.15rem;
+  transition: all 0.2s ease-in-out;
+  font-style: italic;
+}
+
+.container > div > p:nth-child(2) > a {
+  color: var(--black);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.container > div > p:nth-child(3) {
+  font-family: "Cairo";
+  font-size: 15px;
+  color: var(--black2);
+  font-weight: 400;
+}

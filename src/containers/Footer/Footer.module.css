@@ -1,0 +1,46 @@
+.container {
+  border-top: 1px solid var(--grey);
+}
+
+.textSection {
+  padding: 75px 316px;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.textSection > div {
+  flex: 1;
+}
+
+.textSection > div > h4 {
+  font-family: "Big Shoulders";
+  font-size: 21px;
+  color: var(--black2);
+  font-weight: 400;
+  list-style-type: none;
+  margin-bottom: 21px;
+}
+
+.textSection > div > ul > li {
+  font-family: "Cairo";
+  font-size: 15px;
+  color: var(--black2);
+  font-weight: 400;
+  list-style-type: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.textSection > div > ul > li:hover {
+  color: var(--red);
+}
+
+.container > p:nth-child(2) {
+  font-family: "Cairo";
+  font-size: 15px;
+  color: var(--grey4);
+  font-weight: 400;
+  padding: 20px;
+  text-align-last: center;
+  border-top: 1px solid var(--grey);
+}

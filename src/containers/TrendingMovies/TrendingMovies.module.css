@@ -1,0 +1,14 @@
+.container {
+  border-top: 4px solid var(--red);
+  padding-block: 1rem;
+}
+
+.liveVideos {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.liveVideos > a {
+  flex-basis: 33%;
+}

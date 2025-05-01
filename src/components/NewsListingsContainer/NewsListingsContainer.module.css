@@ -1,0 +1,16 @@
+.topBorder {
+  border-top: 4px solid var(--red);
+}
+
+.container > h3 {
+  font-family: "Cairo";
+  font-size: 21px;
+  color: var(--black2);
+  font-weight: 400;
+  margin-bottom: 33px;
+  margin-top: 1rem;
+}
+
+.container > button {
+  max-width: 145px;
+}

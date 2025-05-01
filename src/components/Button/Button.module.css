@@ -1,0 +1,92 @@
+.button {
+  border-radius: 4px;
+  display: flex;
+  padding: 17px 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Work Sans";
+  font-size: 11px;
+  color: var(--black);
+  font-weight: 400;
+  margin-bottom: 33px;
+  width: 100%;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+}
+
+.primary {
+  border: 1px solid var(--red2);
+  background: transparent;
+  color: var(--black);
+}
+
+.secondary {
+  border: 1px solid var(--ds-gray-400, #2e2e2e);
+  color: var(--ds-gray-1000, #ededed);
+  background: transparent;
+}
+
+.tertiary {
+  color: var(--white-body-text, #fff);
+  background: #2ba792;
+  border: none;
+}
+
+.tertiary:hover {
+  background: var(--tertiatyButtonHover);
+}
+
+.tertiary:active {
+  background: var(--tertiaryButtonActive);
+}
+
+.null {
+  color: var(--purple);
+  border: none;
+  background: transparent;
+}
+
+.invalid {
+  border: 1px solid var(--red);
+  color: var(--red);
+  background: transparent;
+}
+
+.delete {
+  background: var(--red);
+  color: var(--white);
+  border: none;
+}
+
+.primary:disabled,
+.tertiary:disabled {
+  background-color: #888888;
+}
+
+.black {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+}
+
+.white {
+  color: var(--black);
+  background: var(--white);
+  border: none;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .button {
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button {
+    font-size: 14px;
+    line-height: 23px;
+  }
+}

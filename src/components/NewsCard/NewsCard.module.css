@@ -1,0 +1,42 @@
+.container {
+  border: 1px solid var(--grey3);
+  min-height: 300px;
+  max-height: 380px;
+  display: flex;
+  flex-direction: column;
+  max-width: 580px;
+  border-radius: 5px;
+}
+
+.pictureSection {
+  height: 279px;
+  flex-basis: 279px;
+}
+
+.pictureSection > img {
+  width: 100%;
+  height: 100%;
+}
+
+.textSection {
+  flex: 1;
+}
+
+.textSection > p:nth-child(1) {
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-family: "Rakkas";
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.textSection > p:nth-child(2) {
+  padding: 10px 15px;
+  border-top: 1px solid #e3edeb;
+  border-bottom: 1px solid #e3edeb;
+  background-color: #f1f5f4;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--black2);
+  font-family: "Cairo";
+}

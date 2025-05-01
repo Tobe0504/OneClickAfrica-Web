@@ -1,0 +1,18 @@
+.container {
+  min-height: 100svh;
+  position: relative;
+}
+
+.container > header {
+  position: sticky;
+  top: 0svh;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+}
+
+.container > section {
+  padding-top: 260px;
+  padding-inline: 200px;
+  padding-bottom: 60px;
+}

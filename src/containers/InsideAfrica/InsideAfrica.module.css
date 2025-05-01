@@ -1,0 +1,28 @@
+.container {
+  border-top: 4px solid var(--red);
+  padding-block: 1rem;
+}
+
+.container > a {
+  display: block;
+  margin-top: 1rem;
+}
+
+.container > a > img {
+  margin-inline: auto;
+  display: block;
+  max-width: 100%;
+  width: 1024px;
+  aspect-ratio: auto 1024 / 515;
+  height: 515px;
+}
+
+.container > figcaption {
+  color: var(--black2);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Cairo";
+  margin-block: 12px;
+  text-align: center;
+  display: block;
+}

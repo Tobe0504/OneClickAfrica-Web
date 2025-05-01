@@ -1,0 +1,15 @@
+.container {
+  border-top: 4px solid var(--red);
+  padding-block: 1rem;
+}
+
+.newsContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.newsContainer > a {
+  flex-basis: calc(33% - 0.4rem);
+}

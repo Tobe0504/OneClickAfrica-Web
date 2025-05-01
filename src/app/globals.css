@@ -1,25 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Cairo:wght@200..1000&family=Rakkas&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #ffffff;
+  --black: #171717;
+  --black2: #404040;
+  --offWhite: #f6f7f8;
+  --grey: rgba(0, 0, 0, 0.1);
+  --grey2: #f1f5f4;
+  --grey3: #e3edeb;
+  --grey4: #808285;
+  --grey5: #3b3b3b;
+  --grey5: #eee;
+  --red: #e54a42;
+  --red2: #e16a38;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--black);
+  background: var(--white);
+  font-family: "Rakkas", "Work Sans", "Big Shoulders", "Cairo", Helvetica,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,10 +48,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
