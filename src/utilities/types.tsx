@@ -1,8 +1,20 @@
 export type newsType = {
-  id: string;
-  image: string;
+  page: number;
+  totalPages: number;
+  totalItems: number;
+  news: newsItemType[];
+};
+
+export type newsItemType = {
+  _id: string;
   title: string;
-  author: string;
-  dateAndTime: string;
-  summaryText: string;
+  description: string;
+  url: string;
+  source: string;
+  publishedAt: string;
+  category: string;
+  image: string;
+  slug: string;
+  author: string | null;
+  __v: 0;
 };

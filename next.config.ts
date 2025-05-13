@@ -2,13 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-        port: "",
-        pathname: "/**",
-      },
+    domains: [
+      "ichef.bbci.co.uk",
+      "res.cloudinary.com",
+      "www.bellanaija.com",
+      "npr.brightspotcdn.com",
+      "cdn.vanguardngr.com",
     ],
   },
 };
