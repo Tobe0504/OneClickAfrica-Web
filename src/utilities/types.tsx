@@ -16,5 +16,22 @@ export type newsItemType = {
   image: string;
   slug: string;
   author: string | null;
+  video?: string;
   __v: 0;
+};
+
+export type queryObjectType = { [key: string]: string | number };
+
+export type requestType = {
+  isLoading: boolean;
+  data: any;
+  error: any;
+  id?: string;
+};
+
+export type commentType = {
+  id: string;
+  comment: string;
+  newsId: string;
+  name: string;
 };

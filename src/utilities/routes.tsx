@@ -25,7 +25,7 @@ export const routes = Object.freeze({
   CRYPTO: "/economy/crypto",
   GAMING: "/economy/gaming",
   FX: "/economy/fx",
-  TECH_NEWS: "/economy/tech-news",
+  TECH_NEWS: "/economy/tech",
   DIASPORA: "/disapora",
   ENTERTAINMENT: "/entertainment",
   BB_NAIJA: "/entertainment/bb-naija",
@@ -34,6 +34,7 @@ export const routes = Object.freeze({
   ADVERTISE: "/advertise",
   HELP_CENTER: "/help-center",
   PRIVACT_POLICY: "/privacy-policy",
+  SEARCH: "/search",
 });
 
 export type headerRoutesChildrenTypes = {

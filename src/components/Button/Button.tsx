@@ -1,3 +1,4 @@
+import { CircularProgress } from "@mui/material";
 import classes from "./Button.module.css";
 
 type ButtonPropTypes = {
@@ -45,7 +46,15 @@ const Button = ({
       onClick={onClick}
       disabled={loading || disabled}
     >
-      {loading ? "Loading..." : children}
+      {loading ? (
+        <CircularProgress
+          color="inherit"
+          size={"1rem"}
+          style={{ color: "#e54a42" }}
+        />
+      ) : (
+        children
+      )}
     </button>
   );
 };

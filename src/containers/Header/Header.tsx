@@ -1,18 +1,28 @@
 "use client";
 
-import { headerRoutes, headerRoutesChildrenTypes } from "@/utilities/routes";
+import {
+  headerRoutes,
+  headerRoutesChildrenTypes,
+  routes,
+} from "@/utilities/routes";
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./Header.module.css";
 import ChevronDown from "@/assets/svgIcons/ChevronDown";
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { IMAGES } from "@/utilities/constants";
+import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 
 const Header = () => {
   // States
   const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [search, setSearch] = useState("");
+
+  // Hooks
+  const { updateSearchParams } = useUpdateSearchParams();
+  const searchKey = updateSearchParams("search", undefined, "get");
 
   // Router
   const router = useRouter();
@@ -45,6 +55,22 @@ const Header = () => {
           width={287}
           height={70}
         />
+
+        <div className={classes.searchContainer}>
+          <input
+            type="search"
+            placeholder="Search news"
+            onChange={(e: any) => {
+              setSearch(e.target?.value as string);
+            }}
+            value={search}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && search.trim()) {
+                router.push(`${routes.SEARCH}?search=${search?.trim()}`);
+              }
+            }}
+          />
+        </div>
       </div>
 
       <nav className={` ${visible ? classes.visible : classes.hidden2}`}>

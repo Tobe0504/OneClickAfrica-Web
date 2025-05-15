@@ -44,17 +44,21 @@ const NewsListingsContainer = ({
         <Loader />
       ) : (
         <>
-          <ul className={classes.newsListingsContainer}>
-            {pathname === "/"
-              ? newsData?.slice(0, 10)?.map((news, i) => {
-                  return <NewsItemContainer data={news} key={i} />;
-                })
-              : newsData?.map((news, i) => {
-                  return <NewsItemContainer data={news} key={i} />;
-                })}
-          </ul>
+          {newsData?.length ? (
+            <ul className={classes.newsListingsContainer}>
+              {pathname === "/"
+                ? newsData?.slice(0, 10)?.map((news, i) => {
+                    return <NewsItemContainer data={news} key={i} />;
+                  })
+                : newsData?.map((news, i) => {
+                    return <NewsItemContainer data={news} key={i} />;
+                  })}
+            </ul>
+          ) : (
+            <p className={classes.noNews}>No news to show currently</p>
+          )}
 
-          {route && (
+          {route && newsData?.length > 0 && (
             <Button
               onClick={() => {
                 router.push(route);

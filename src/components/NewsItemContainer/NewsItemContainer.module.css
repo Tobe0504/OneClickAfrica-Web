@@ -2,9 +2,15 @@
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--grey5);
+  padding-bottom: 1.5rem;
+}
+
+.outerContainer {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  list-style: none;
 }
 
 .container > img {
@@ -14,7 +20,14 @@
   object-fit: cover;
 }
 
-.container > div {
+.greyBackground {
+  width: 150px;
+  flex-basis: 150px;
+  height: 150px;
+  background-color: var(--grey);
+}
+
+.container > div:not(.greyBackground) {
   flex: 1;
 }
 
@@ -54,4 +67,45 @@
   font-size: 15px;
   color: var(--black2);
   font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.commentsContainer {
+  margin-top: 0.5rem;
+}
+
+.commentsContainer > div:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.commentsContainer > div:first-child > span {
+  font-family: "Cairo";
+  font-size: 15px;
+  color: var(--black);
+  font-weight: 400;
+}
+
+.noComment {
+  margin-block: 1rem;
+  text-align: center;
+  font-family: "Cairo";
+  font-size: 15px;
+  color: var(--grey6);
+  font-weight: 400;
+}
+
+.commentInteractionContainer {
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.commentsContainer > div:first-child > svg {
+  fill: var(--red);
 }

@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   height: 200px;
+  flex-basis: 100%;
 }
 
 .container > img {

@@ -3,23 +3,42 @@
 import Card from "@/components/Card/Card";
 import NewsListingsContainer from "@/components/NewsListingsContainer/NewsListingsContainer";
 import Paginator from "@/components/Paginator/Paginator";
-import { useEconomyNews } from "@/hooks/useNews";
+import { usePoliticsNews, useSearchNews } from "@/hooks/useNews";
+import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 import Layout from "@/layouts/Layout/Layout";
 import { dummyNews } from "@/utilities/data";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
-const Economy = () => {
+const Search = () => {
+  // Hooks
+  const { updateSearchParams } = useUpdateSearchParams();
+
   // States
   const [pageNumber, setPageNumber] = useState(1);
 
+  // Router
+  const search = updateSearchParams("search", undefined, "get");
+  const router = useRouter();
+
   // Requests
-  const { isLoading, data } = useEconomyNews({ page: pageNumber });
+  const { isLoading, data } = useSearchNews({
+    page: pageNumber,
+    search: search as string,
+  });
+
+  //   Effects
+  useEffect(() => {
+    if (!search?.trim()) {
+      router.back();
+    }
+  }, [search]);
 
   return (
     <Layout>
       <Card>
         <NewsListingsContainer
-          header="ECONOMY"
+          header={`Search results for ${search}`}
           news={data?.data}
           loading={isLoading}
         />
@@ -35,4 +54,4 @@ const Economy = () => {
   );
 };
 
-export default Economy;
+export default Search;

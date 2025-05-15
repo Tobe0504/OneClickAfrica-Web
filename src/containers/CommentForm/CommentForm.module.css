@@ -1,0 +1,14 @@
+.container {
+  margin-block: 2rem;
+  padding-inline: 0.5rem;
+  width: 50%;
+}
+
+.container > h4 {
+  font-family: "Cairo";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 150%;
+  margin-bottom: 1rem;
+  color: var(--red);
+}
