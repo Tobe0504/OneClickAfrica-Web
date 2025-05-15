@@ -5,7 +5,6 @@ import NewsListingsContainer from "@/components/NewsListingsContainer/NewsListin
 import Paginator from "@/components/Paginator/Paginator";
 import { useAfricaNews } from "@/hooks/useNews";
 import Layout from "@/layouts/Layout/Layout";
-import { dummyNews } from "@/utilities/data";
 import { useState } from "react";
 
 const Africa = () => {

@@ -1,8 +1,13 @@
+import Loader from "@/components/Loader/Loader";
 import Africa from "@/containers/Africa/Africa";
-import React from "react";
+import React, { Suspense } from "react";
 
 const page = () => {
-  return <Africa />;
+  return (
+    <Suspense fallback={<Loader />}>
+      <Africa />
+    </Suspense>
+  );
 };
 
 export default page;

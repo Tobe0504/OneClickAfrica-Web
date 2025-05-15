@@ -1,8 +1,13 @@
+import Loader from "@/components/Loader/Loader";
 import LatestNews from "@/containers/LatestNews/LatestNews";
-import React from "react";
+import React, { Suspense } from "react";
 
 const page = () => {
-  return <LatestNews />;
+  return (
+    <Suspense fallback={<Loader />}>
+      <LatestNews />
+    </Suspense>
+  );
 };
 
 export default page;

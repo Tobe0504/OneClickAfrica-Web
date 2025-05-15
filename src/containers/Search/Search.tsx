@@ -3,10 +3,9 @@
 import Card from "@/components/Card/Card";
 import NewsListingsContainer from "@/components/NewsListingsContainer/NewsListingsContainer";
 import Paginator from "@/components/Paginator/Paginator";
-import { usePoliticsNews, useSearchNews } from "@/hooks/useNews";
+import { useSearchNews } from "@/hooks/useNews";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
 import Layout from "@/layouts/Layout/Layout";
-import { dummyNews } from "@/utilities/data";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
