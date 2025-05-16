@@ -1,7 +1,7 @@
 .container {
   border: 1px solid var(--grey3);
-  min-height: 300px;
-  max-height: 380px;
+  height: 300px;
+  height: 380px;
   display: flex;
   flex-direction: column;
   max-width: 580px;
@@ -9,8 +9,8 @@
 }
 
 .pictureSection {
-  height: 279px;
-  flex-basis: 279px;
+  height: 250px;
+  flex-basis: 250px;
 }
 
 .pictureSection > img {
@@ -20,6 +20,8 @@
 
 .textSection {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .textSection > p:nth-child(1) {
@@ -28,6 +30,12 @@
   font-family: "Rakkas";
   font-weight: 400;
   font-size: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 2;
 }
 
 .textSection > p:nth-child(2) {
@@ -39,6 +47,7 @@
   font-style: italic;
   color: var(--black2);
   font-family: "Cairo";
+  flex: 1;
 }
 
 @media screen and (max-width: 767px) {

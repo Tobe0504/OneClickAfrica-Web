@@ -28,7 +28,9 @@ const HomePage = () => {
   const { isLoading: naijaNewsIsLoading, data: naijaNews } = useNaijaNews({
     page: 1,
   });
-  const { isLoading: sportNewsIsLoading, data: sportNews } = useSportNews();
+  const { isLoading: sportNewsIsLoading, data: sportNews } = useSportNews({
+    page: 1,
+  });
   const { isLoading: generalPoliticsIsLoading, data: generalPoliticsNews } =
     useGeneralPoliticsNews();
   const { isLoading: gossipIsLoading, data: gossipNews } = useGossipNews();

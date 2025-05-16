@@ -18,7 +18,7 @@ const Headlines = ({ news, loading }: HeadlinesTypes) => {
         {loading ? (
           <Loader />
         ) : (
-          news.news?.slice(0, 3).map((data) => {
+          news?.news?.slice(0, 3).map((data) => {
             return <NewsCard key={data?._id} data={data} />;
           })
         )}

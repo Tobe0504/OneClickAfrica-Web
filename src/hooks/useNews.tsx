@@ -20,8 +20,9 @@ export const useNaijaNews = (params: queryObjectType) => {
   return useGetHook(url);
 };
 
-export const useSportNews = () => {
-  const url = "/news/sport-news";
+export const useSportNews = (params: queryObjectType) => {
+  const baseUrl = "/news/sport-news";
+  const url = generateQueryString(baseUrl, params);
   return useGetHook(url);
 };
 

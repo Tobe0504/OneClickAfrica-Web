@@ -68,6 +68,7 @@ export const headerRoutes: headerRoutesTypes = [
     children: null,
     isActive: false,
   },
+
   {
     title: "Africa",
     route: routes.AFRICA,
@@ -135,6 +136,12 @@ export const headerRoutes: headerRoutesTypes = [
         route: routes.TECH_NEWS,
       },
     ],
+  },
+  {
+    title: "Sports",
+    route: routes.SPORTS,
+    children: null,
+    isActive: false,
   },
   {
     title: "Disapora",
