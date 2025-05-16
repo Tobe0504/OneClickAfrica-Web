@@ -26,3 +26,47 @@
   text-align: center;
   display: block;
 }
+
+@media screen and (max-width: 767px) {
+  .container {
+    border-top: 4px solid var(--red);
+    padding-block: 1rem;
+  }
+
+  .container > a {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .container > a > img {
+    max-width: 100%;
+    width: 100%;
+    height: 315px;
+  }
+
+  .container > figcaption {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    border-top: 4px solid var(--red);
+    padding-block: 1rem;
+  }
+
+  .container > a {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .container > a > img {
+    max-width: 100%;
+    width: 100%;
+    height: 315px;
+  }
+
+  .container > figcaption {
+    font-size: 0.75rem;
+  }
+}

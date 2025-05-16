@@ -1,0 +1,79 @@
+.container {
+  overflow-y: auto;
+  height: 100vh;
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+.container > div:nth-child(1) {
+  text-align: right;
+  position: absolute;
+  top: 2.1rem;
+  right: 1rem;
+}
+
+.container > nav {
+  padding: 1rem;
+}
+
+.container > nav > div,
+.container > nav > a {
+  font-family: "Cairo";
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 130%;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  display: block;
+}
+
+.moreOptions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+}
+
+.moreOptions > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.moreOptions > .moreOptions > svg:nth-child(3) {
+  fill: var(--black);
+}
+
+.moreOptions > svg {
+  margin-left: auto;
+}
+
+.moreOptions > span:nth-child(2) {
+  font-weight: 600;
+}
+
+.children {
+  font-family: "Cairo";
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: left;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+  flex-basis: 100%;
+  margin-left: 0rem;
+}
+
+.children > a {
+  margin-left: 1rem;
+  font-size: 18px;
+  display: block;
+  margin-top: 1rem;
+}

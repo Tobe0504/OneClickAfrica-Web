@@ -23,3 +23,47 @@
 .container > button {
   max-width: 145px;
 }
+
+@media screen and (max-width: 767px) {
+  .topBorder {
+    border-top: 2px solid var(--red);
+  }
+
+  .container > h3 {
+    font-family: "Cairo";
+    font-size: 18px;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .noNews {
+    font-size: 18px;
+    padding: 1rem 0;
+  }
+
+  .container > button {
+    max-width: 145px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .topBorder {
+    border-top: 2px solid var(--red);
+  }
+
+  .container > h3 {
+    font-family: "Cairo";
+    font-size: 18px;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .noNews {
+    font-size: 18px;
+    padding: 1rem 0;
+  }
+
+  .container > button {
+    max-width: 145px;
+  }
+}

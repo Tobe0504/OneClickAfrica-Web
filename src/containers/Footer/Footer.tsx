@@ -34,10 +34,7 @@ const Footer = () => {
           );
         })}
       </div>
-      <p>
-        © Copyright 2024 oneclickafrica. All rights reserved. | Powered by Sam
-        C.C
-      </p>
+      <p>© Copyright 2024 oneclickafrica. All rights reserved. C.C</p>
     </footer>
   );
 };

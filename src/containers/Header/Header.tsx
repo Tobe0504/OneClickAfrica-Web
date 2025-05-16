@@ -9,16 +9,20 @@ import Image from "next/image";
 import Link from "next/link";
 import classes from "./Header.module.css";
 import ChevronDown from "@/assets/svgIcons/ChevronDown";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { IMAGES } from "@/utilities/constants";
 import useUpdateSearchParams from "@/hooks/useUpdateSearchParams";
+import { Menu } from "@mui/material";
+import Hamburger from "@/assets/svgIcons/Hamburder";
+import Sidenav from "../SideNav/SideNav";
 
 const Header = () => {
   // States
   const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [search, setSearch] = useState("");
+  const [navItemsState, setNavItemsState] = useState(headerRoutes);
 
   // Hooks
   const { updateSearchParams } = useUpdateSearchParams();
@@ -35,6 +39,22 @@ const Header = () => {
 
       setVisible(currentScrollPos < prevScrollPos || currentScrollPos < 50);
       setPrevScrollPos(currentScrollPos);
+    }
+  };
+
+  const sideNavRef = useRef<HTMLDivElement | null>(null);
+
+  // Utils
+  const activeNavItem = navItemsState?.find((data) => data?.isActive);
+  const handleSidenavOpen = () => {
+    if (sideNavRef?.current) {
+      sideNavRef.current.style.width = "100vw";
+    }
+  };
+
+  const handleSidenavClose = () => {
+    if (sideNavRef?.current) {
+      sideNavRef.current.style.width = "0%";
     }
   };
 
@@ -71,10 +91,12 @@ const Header = () => {
             }}
           />
         </div>
+
+        <Hamburger onClick={handleSidenavOpen} />
       </div>
 
       <nav className={` ${visible ? classes.visible : classes.hidden2}`}>
-        {headerRoutes.map((data) => {
+        {navItemsState.map((data) => {
           if ((data?.children as headerRoutesChildrenTypes[])?.length > 0) {
             return (
               <div onClick={() => router.push(data?.route)} key={data.route}>
@@ -126,6 +148,10 @@ const Header = () => {
           );
         })}
       </nav>
+
+      <div className={classes.sidenav} ref={sideNavRef}>
+        <Sidenav onClose={handleSidenavClose} />
+      </div>
     </header>
   );
 };

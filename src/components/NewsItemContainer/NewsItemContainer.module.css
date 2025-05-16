@@ -109,3 +109,127 @@
 .commentsContainer > div:first-child > svg {
   fill: var(--red);
 }
+
+@media screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+  }
+
+  .outerContainer {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .container > img {
+    width: 120px;
+    flex-basis: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .container > div:not(.greyBackground) {
+    flex: 1;
+  }
+
+  .container > div > a:first-child {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .container > div > a:first-child:hover,
+  .container > div > p:nth-child(2) > a:hover {
+    color: var(--red);
+  }
+
+  .container > div > p:nth-child(2) {
+    font-size: 12px;
+    margin-bottom: 0.15rem;
+  }
+
+  .container > div > p:nth-child(2) > a {
+    color: var(--black);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .container > div > p:nth-child(3) {
+    font-size: 14px;
+  }
+
+  .commentsContainer {
+    margin-top: 0.5rem;
+  }
+
+  .commentsContainer > div:first-child > span {
+    font-size: 13px;
+  }
+
+  .noComment {
+    margin-block: 0.5rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+  }
+
+  .outerContainer {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .container > img {
+    width: 120px;
+    flex-basis: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .container > div:not(.greyBackground) {
+    flex: 1;
+  }
+
+  .container > div > a:first-child {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .container > div > a:first-child:hover,
+  .container > div > p:nth-child(2) > a:hover {
+    color: var(--red);
+  }
+
+  .container > div > p:nth-child(2) {
+    font-size: 12px;
+    margin-bottom: 0.15rem;
+  }
+
+  .container > div > p:nth-child(2) > a {
+    color: var(--black);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .container > div > p:nth-child(3) {
+    font-size: 14px;
+  }
+
+  .commentsContainer {
+    margin-top: 0.5rem;
+  }
+
+  .commentsContainer > div:first-child > span {
+    font-size: 13px;
+  }
+
+  .noComment {
+    margin-block: 0.5rem;
+    font-weight: 400;
+  }
+}

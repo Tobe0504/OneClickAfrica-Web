@@ -46,6 +46,7 @@ type headerRoutesTypes = {
   title: string;
   route: string;
   children: headerRoutesChildrenTypes[] | null;
+  isActive?: boolean;
 }[];
 
 export const headerRoutes: headerRoutesTypes = [
@@ -53,20 +54,24 @@ export const headerRoutes: headerRoutesTypes = [
     title: "Home",
     route: routes.BASE_URL,
     children: null,
+    isActive: false,
   },
   {
     title: "Latest News",
     route: routes.LATEST_NEWS,
     children: null,
+    isActive: false,
   },
   {
     title: "Politics",
     route: routes.POLITICS,
     children: null,
+    isActive: false,
   },
   {
     title: "Africa",
     route: routes.AFRICA,
+    isActive: false,
     children: [
       {
         title: "Ghana",
@@ -102,6 +107,7 @@ export const headerRoutes: headerRoutesTypes = [
   {
     title: "Economy",
     route: routes.ECONOMY,
+    isActive: false,
     children: [
       {
         title: "Energy & Power inductry",
@@ -134,6 +140,7 @@ export const headerRoutes: headerRoutesTypes = [
     title: "Disapora",
     route: routes.DIASPORA,
     children: null,
+    isActive: false,
   },
   {
     title: "Entertainment",

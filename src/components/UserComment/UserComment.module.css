@@ -17,3 +17,25 @@
   color: var(--black);
   font-weight: 400;
 }
+
+@media screen and (max-width: 767px) {
+  .container > p:first-child {
+    font-size: 14px;
+  }
+
+  .container > p:nth-child(2) {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container > p:first-child {
+    font-size: 14px;
+  }
+
+  .container > p:nth-child(2) {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

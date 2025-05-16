@@ -12,3 +12,31 @@
   margin-bottom: 1rem;
   color: var(--red);
 }
+
+@media screen and (max-width: 767px) {
+  .container {
+    margin-block: 1rem;
+    width: 100%;
+  }
+
+  .container > h4 {
+    font-family: "Cairo";
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+    color: var(--red);
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    margin-block: 1rem;
+    width: 100%;
+  }
+
+  .container > h4 {
+    font-family: "Cairo";
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+    color: var(--red);
+  }
+}

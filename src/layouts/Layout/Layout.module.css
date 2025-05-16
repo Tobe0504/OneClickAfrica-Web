@@ -16,3 +16,23 @@
   padding-inline: 200px;
   padding-bottom: 60px;
 }
+
+@media screen and (max-width: 767px) {
+  .container {
+    min-height: 100svh;
+    position: relative;
+  }
+
+  .container > header {
+    top: 0svh;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+  }
+
+  .container > section {
+    padding-top: 100px;
+    padding-inline: 16px;
+    padding-bottom: 20px;
+  }
+}

@@ -81,6 +81,7 @@
   .button {
     font-size: 14px;
     line-height: 23px;
+    padding: 8px 12px;
   }
 }
 
@@ -88,5 +89,6 @@
   .button {
     font-size: 14px;
     line-height: 23px;
+    padding: 8px 12px;
   }
 }

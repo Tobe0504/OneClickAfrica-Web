@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Oneclick Africa",
-  description: "All news in one click",
+  description: "All news on one click",
 };
 
 export default function RootLayout({

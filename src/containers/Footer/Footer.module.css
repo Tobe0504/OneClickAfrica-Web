@@ -44,3 +44,42 @@
   text-align-last: center;
   border-top: 1px solid var(--grey);
 }
+
+@media screen and (max-width: 767px) {
+  .textSection {
+    padding: 16px;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .textSection > div:first-child {
+    width: 50%;
+    height: 70px;
+  }
+
+  .textSection > div:first-child > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .textSection > div {
+    flex: 1;
+  }
+
+  .textSection > div > h4 {
+    font-family: "Big Shoulders";
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+  }
+
+  .textSection > div > ul > li {
+    font-size: 14px;
+  }
+
+  .container > p:nth-child(2) {
+    font-size: 12px;
+    padding: 16px;
+    text-align-last: center;
+    border-top: 1px solid var(--grey);
+  }
+}

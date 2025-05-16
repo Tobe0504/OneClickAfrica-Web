@@ -13,3 +13,29 @@
 .newsContainer > a {
   flex-basis: calc(33% - 0.4rem);
 }
+
+@media screen and (max-width: 767px) {
+  .newsContainer {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .newsContainer > a {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .newsContainer {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .newsContainer > a {
+    flex-basis: 100%;
+  }
+}

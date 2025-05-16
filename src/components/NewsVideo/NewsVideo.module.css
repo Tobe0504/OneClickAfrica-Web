@@ -9,3 +9,25 @@
   min-height: 250px;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 767px) {
+  .video > iframe {
+    min-width: 100%;
+  }
+
+  .video {
+    min-height: 100%;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .video > iframe {
+    min-width: 100%;
+  }
+
+  .video {
+    min-height: 100%;
+    border-radius: 5px;
+  }
+}
