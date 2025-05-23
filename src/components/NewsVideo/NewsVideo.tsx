@@ -9,12 +9,11 @@ const NewsVideo = ({ url }: NewsVideoTypes) => {
     <a className={classes.video}>
       <iframe
         height="315"
-        src={url}
+        src={`${url}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0`}
         title="YouTube video player"
-        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen={false}
+        allowFullScreen
       ></iframe>
     </a>
   );
