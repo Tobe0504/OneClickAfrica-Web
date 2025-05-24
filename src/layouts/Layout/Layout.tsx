@@ -6,6 +6,7 @@ import Footer from "@/containers/Footer/Footer";
 import Head from "next/head";
 import { usePathname } from "next/navigation";
 import { headerRoutes, routes } from "@/utilities/routes";
+import NewsCarousel from "@/containers/NewsCarousel/NewsCarousel";
 
 type LayoutPropTypes = {
   children: React.ReactNode;
@@ -36,6 +37,8 @@ const Layout = ({ children, className }: LayoutPropTypes) => {
         <Header />
         <section className={className}>{children}</section>
         <Footer />
+
+        <NewsCarousel />
       </main>
     </>
   );

@@ -24,7 +24,28 @@
   width: 150px;
   flex-basis: 150px;
   height: 150px;
-  background-color: var(--grey);
+  background-color: var(--grey2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+
+  font-family: "Cairo";
+  font-size: 18px;
+  color: var(--black2);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.greyBackground > span {
+  line-height: 100%;
+}
+
+.greyBackground > span:nth-child(2) {
+  color: var(--red);
+  margin: 0;
+  padding: 0;
 }
 
 .container > div:not(.greyBackground) {
@@ -128,6 +149,7 @@
     flex-basis: 120px;
     height: 120px;
     object-fit: cover;
+    font-size: 14px;
   }
 
   .container > div:not(.greyBackground) {

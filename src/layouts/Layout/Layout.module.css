@@ -11,10 +11,15 @@
   width: 100%;
 }
 
-.container > section {
+.container > section:not(.container > section:last-child) {
   padding-top: 260px;
   padding-inline: 200px;
   padding-bottom: 60px;
+}
+
+.container > section:last-child {
+  position: fixed;
+  bottom: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -30,7 +35,7 @@
     width: 100%;
   }
 
-  .container > section {
+  .container > section:not(.container > section:last-child) {
     padding-top: 100px;
     padding-inline: 16px;
     padding-bottom: 20px;

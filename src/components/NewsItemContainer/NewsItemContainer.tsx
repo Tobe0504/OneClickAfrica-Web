@@ -13,12 +13,14 @@ import { useNewsComments } from "@/hooks/useNews";
 import Loader from "../Loader/Loader";
 import { mutate } from "swr";
 import { generateQueryString } from "@/helpers/generateQueryString";
+import { capitalize } from "@mui/material";
 
 type NewsItemContainerType = {
   data: newsItemType;
+  title?: string;
 };
 
-const NewsItemContainer = ({ data }: NewsItemContainerType) => {
+const NewsItemContainer = ({ data, title }: NewsItemContainerType) => {
   // States
   const [showComments, setShowComments] = useState(false);
   const [comment, setComment] = useState({
@@ -30,7 +32,7 @@ const NewsItemContainer = ({ data }: NewsItemContainerType) => {
     data: null,
     error: null,
   });
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber] = useState(1);
 
   // Hooks
   const { errorFlowFunction } = useError();
@@ -84,7 +86,13 @@ const NewsItemContainer = ({ data }: NewsItemContainerType) => {
         {data.image ? (
           <Image src={data?.image} alt={data?.title} width={150} height={150} />
         ) : (
-          <div className={classes.greyBackground}></div>
+          <div className={classes.greyBackground}>
+            {capitalize(title as string)
+              .split(" ")
+              .map((data) => (
+                <span>{data}</span>
+              ))}
+          </div>
         )}
         <div>
           <a>{data?.title}</a>

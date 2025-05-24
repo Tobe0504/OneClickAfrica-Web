@@ -48,10 +48,14 @@ const NewsListingsContainer = ({
             <ul className={classes.newsListingsContainer}>
               {pathname === "/"
                 ? newsData?.slice(0, 10)?.map((news, i) => {
-                    return <NewsItemContainer data={news} key={i} />;
+                    return (
+                      <NewsItemContainer data={news} key={i} title={header} />
+                    );
                   })
                 : newsData?.map((news, i) => {
-                    return <NewsItemContainer data={news} key={i} />;
+                    return (
+                      <NewsItemContainer data={news} key={i} title={header} />
+                    );
                   })}
             </ul>
           ) : (

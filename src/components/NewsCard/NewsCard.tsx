@@ -18,8 +18,10 @@ const NewsCard = ({ data }: NewsCardTypes) => {
       }}
     >
       <div className={classes.pictureSection}>
-        {data?.image && (
+        {data?.image ? (
           <Image src={data?.image} width={400} height={279} alt={data?.title} />
+        ) : (
+          <div>Headline</div>
         )}
       </div>
       <div className={classes.textSection}>

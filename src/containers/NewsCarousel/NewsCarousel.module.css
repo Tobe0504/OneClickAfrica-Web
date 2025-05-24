@@ -1,0 +1,60 @@
+.container {
+  width: 100%;
+  overflow: hidden;
+  background: var(--black);
+  padding: 8px 16px;
+}
+
+.innerContainer {
+  white-space: nowrap;
+}
+
+.innerContainer > div > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+}
+
+.innerContainer:hover {
+  animation-play-state: paused;
+}
+
+.innerContainer > div > div > div {
+  flex-shrink: 0;
+}
+
+.innerContainer > div > div > a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  font-family: "Cairo";
+  font-size: 14px;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.innerContainer > div > div > a > span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--red);
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / var(--set-count, 4)));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 84x 8px;
+  }
+}
