@@ -9,7 +9,14 @@ type NewsCardTypes = {
 
 const NewsCard = ({ data }: NewsCardTypes) => {
   return (
-    <a className={classes.container}>
+    <a
+      className={classes.container}
+      onClick={() => {
+        if (typeof window !== "undefined") {
+          window.open(data?.url);
+        }
+      }}
+    >
       <div className={classes.pictureSection}>
         {data?.image && (
           <Image src={data?.image} width={400} height={279} alt={data?.title} />

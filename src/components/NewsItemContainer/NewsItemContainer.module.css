@@ -122,7 +122,8 @@
     padding-bottom: 1rem;
   }
 
-  .container > img {
+  .container > img,
+  .greyBackground {
     width: 120px;
     flex-basis: 120px;
     height: 120px;
