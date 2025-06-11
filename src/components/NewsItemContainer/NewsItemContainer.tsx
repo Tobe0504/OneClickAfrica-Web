@@ -102,6 +102,11 @@ const NewsItemContainer = ({ data, title }: NewsItemContainerType) => {
                 by <a>{data?.author}</a>{" "}
               </>
             )}{" "}
+            {data?.source && (
+              <>
+                from <a>{capitalize(data?.source)}</a>{" "}
+              </>
+            )}{" "}
             on {format(data?.publishedAt, "do MMMM, yyyy. hh:mm a")}
           </p>
           <p>{data?.description}</p>

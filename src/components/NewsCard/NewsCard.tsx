@@ -1,4 +1,5 @@
 import { newsItemType } from "@/utilities/types";
+import { capitalize } from "@mui/material";
 import { format } from "date-fns";
 import Image from "next/image";
 import classes from "./NewsCard.module.css";
@@ -26,7 +27,10 @@ const NewsCard = ({ data }: NewsCardTypes) => {
       </div>
       <div className={classes.textSection}>
         <p>{data?.title}</p>
-        <p>{format(data?.publishedAt, "do MMMM, yyyy. hh:mma")}</p>
+        <p>
+          {format(data?.publishedAt, "do MMMM, yyyy. hh:mma")} from{" "}
+          <span>{capitalize(data?.source)}</span>
+        </p>
       </div>
     </a>
   );
