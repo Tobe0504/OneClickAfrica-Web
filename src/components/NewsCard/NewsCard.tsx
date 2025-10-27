@@ -1,3 +1,4 @@
+import { IMAGES } from "@/utilities/constants";
 import { newsItemType } from "@/utilities/types";
 import { capitalize } from "@mui/material";
 import { format } from "date-fns";
@@ -22,7 +23,14 @@ const NewsCard = ({ data }: NewsCardTypes) => {
         {data?.image ? (
           <Image src={data?.image} width={400} height={279} alt={data?.title} />
         ) : (
-          <div>Headline</div>
+          <div className={classes.greyBackground}>
+            <Image
+              src={IMAGES.LOGO}
+              alt={data?.title}
+              width={150}
+              height={150}
+            />
+          </div>
         )}
       </div>
       <div className={classes.textSection}>

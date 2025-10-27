@@ -14,6 +14,7 @@ import Loader from "../Loader/Loader";
 import { mutate } from "swr";
 import { generateQueryString } from "@/helpers/generateQueryString";
 import { capitalize } from "@mui/material";
+import { IMAGES } from "@/utilities/constants";
 
 type NewsItemContainerType = {
   data: newsItemType;
@@ -87,11 +88,12 @@ const NewsItemContainer = ({ data, title }: NewsItemContainerType) => {
           <Image src={data?.image} alt={data?.title} width={150} height={150} />
         ) : (
           <div className={classes.greyBackground}>
-            {capitalize(title as string)
-              .split(" ")
-              .map((data) => (
-                <span>{data}</span>
-              ))}
+            <Image
+              src={IMAGES.LOGO}
+              alt={data?.title}
+              width={150}
+              height={150}
+            />
           </div>
         )}
         <div>

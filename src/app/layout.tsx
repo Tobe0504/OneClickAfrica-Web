@@ -7,6 +7,22 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Oneclick Africa",
   description: "All news on one click",
+  keywords: [
+    "Trending",
+    "Headlines",
+    "Latest news",
+    "Newsnow",
+    "African news",
+    "Sports",
+    "Oneclick Africa",
+    "Oneclickafrica limited",
+    "Latest Headlines",
+    "Breaking news",
+    "Curated news",
+    "Trending topics",
+    "Top news stories",
+    "Africa today",
+  ],
 };
 
 export default function RootLayout({
@@ -35,6 +51,11 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-WC8GN12NX2"
+        ></script>
       </head>
 
       <body>

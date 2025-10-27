@@ -30,9 +30,6 @@ const Layout = ({ children, className }: LayoutPropTypes) => {
 
   return (
     <>
-      <Head>
-        <title>Tobe</title>
-      </Head>
       <main className={classes.container}>
         <Header />
         <section className={className}>{children}</section>
